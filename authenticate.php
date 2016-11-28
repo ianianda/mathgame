@@ -18,7 +18,9 @@
 		<?php echo rand(0, 20); ?>
 	</label>
         <label class="col-sm-2">-</label>
-        <label class="col-sm-2">3</label>
+        <label class="col-sm-2">
+	    <?php echo rand(0, 20); ?>
+	</label>
         <div class="col-sm-3"></div>
     </div>
 
