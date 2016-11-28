@@ -14,6 +14,7 @@
 <form action="index.php" method="post" role="form" class="form-horizontal">
 
 	<?php
+	$textbox = "";
 	$_SESSION['textboxError'] = false;
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
   		if (!empty($_POST["textbox"]) && (!is_numeric($_POST["textbox"]))) {
