@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container">
-<form action="index.php" method="post" role="form" class="form-horizontal">
+<form action="authenticate.php" method="post" role="form" class="form-horizontal">
 
 	<?php
 	$textbox = "";
