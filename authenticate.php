@@ -14,6 +14,13 @@
 <form action="authenticate.php" method="post" role="form" class="form-horizontal">
 
 	<?php
+	$ops = array('+','-');
+	$rand_key = array_rand($ops);
+	$operator =- $ops[$rand_key];
+	$first_number = rand(0, 20);
+	$second_number = rand(0, 20);
+	$add_total = $first_number + $second_number;
+	$sub_total = $first_number - $second_number;
 	$textbox = "";
 	$_SESSION['textboxError'] = false;
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -32,12 +39,12 @@
         <div class="col-sm-4"><a href="logout.php" class="btn btn-default btn-sm">Logout</a></div>
     </div>
     <div class="row">
-        <label class="col-sm-2 col-sm-offset-3">
-		<?php echo rand(0, 20); ?>
+        <label name="ranum1" class="col-sm-2 col-sm-offset-3">
+		<?php $first_number ?>
 	</label>
         <label class="col-sm-2">-</label>
-        <label class="col-sm-2">
-	    <?php echo rand(0, 20); ?>
+        <label name="ranum2" class="col-sm-2">
+	    <?php $second_number ?>
 	</label>
         <div class="col-sm-3"></div>
     </div>
