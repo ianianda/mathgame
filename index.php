@@ -30,7 +30,7 @@
 	    }
 	
 	    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		    
+		    $score = $_POST['score'];
   		if (is_numeric($_POST["answer"])) { //textbox is a number
 		    $answer = ($_POST["answer"]);
 			//echo $answer;
