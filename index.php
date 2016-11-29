@@ -18,7 +18,7 @@
 	    $first_number = rand(0, 20);
 	    $second_number = rand(0, 20);
 	    $_SESSION['textboxError'] = false;
-	    $score = $_SESSION['score'];
+	    $score = $_POST['score'];
 	    $_POST['total'] = $total++;
 	    
 	    
@@ -52,11 +52,11 @@
             <div class="col-sm-3"></div>
         </div>
 	<!-- why we need a hidden area? -->    
-        <input type="hidden" name="first_number" value="8" />
-        <input type="hidden" name="operation" value="-" />
-        <input type="hidden" name="second_number" value="3" />
-        <input type="hidden" name="total" value="0" />
-        <input type="hidden" name="score" value="0" />
+        <input type="hidden" name="first_number" value="<?php echo $first_number; ?>" />
+        <input type="hidden" name="operation" value="<?php echo $operator; ?>" />
+        <input type="hidden" name="second_number" value="<?php echo $second_number; ?>" />
+        <input type="hidden" name="total" value="<?php echo $total; ?>" />
+        <input type="hidden" name="score" value="<?php echo $score; ?>" />
 
         <div class="form-group">
             <div class="col-sm-3 col-sm-offset-4">	
