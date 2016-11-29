@@ -16,7 +16,6 @@
 	} else {
 	    $total = $_SESSION['total'];
 	}
-	//$score= $_POST['score'];
     ?>
 <head>
     <title>Math Game</title>
@@ -33,8 +32,11 @@
 	    $first_number = rand(0, 20);
 	    $second_number = rand(0, 20);
 	    $_SESSION['textboxError'] = false;
-	    $total = $_POST['total'] + 1;
 	    
+	    if (isset($_POST['total']){
+	        $total = $_POST['total'] + 1;
+	    }
+		
 	    if ( $ran_op == "0" ) {
 	        $key = $first_number + $second_number;
 	    } else {
