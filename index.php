@@ -18,7 +18,7 @@
 	    $first_number = rand(0, 20);
 	    $second_number = rand(0, 20);
 	    $_SESSION['textboxError'] = false;
-	    $score = $_POST["score"];
+	    $_POST["score"] = $score;
 	    $_POST['total'] = $total++;
 	    
 	    
