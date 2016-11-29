@@ -31,9 +31,9 @@
    			$textbox = ($_POST["textbox"]);
 			$_SESSION['textbox'] = $textbox;}}
 	
-	//if($_SESSION['textboxError']) {
-       	//	header("Location:authenticate.php"); 
-      	//	die();  }
+	if($_SESSION['textboxError']) {
+       		header("Location:authenticate.php"); 
+      		die();  }
 	?>
 	
 	<div class="row">
