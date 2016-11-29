@@ -15,7 +15,7 @@
 	    $operators = array('+','-');
 	    $ran_op = rand() % 2;
 	    $operator = $operators[$index]; 
-	    echo $operator;//
+	    //
 	//if($index == 0) a+b;
 	//$rand_key = array_rand($ops);
 	//$operator = $ops[$rand_key];
@@ -57,6 +57,7 @@
 	<?php
 		if($_SESSION['textboxError']) {
        		echo "<font color='red'>You must enter a number for your answer.</font>";  }
+		echo $operator;
 		?>
         </div>
         <div class="col-sm-5">
