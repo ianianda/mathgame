@@ -19,7 +19,7 @@
 	    $second_number = rand(0, 20);
 	    $_SESSION['textboxError'] = false;
 	    $score = $_POST["score"];
-	    $total++;
+	    $_POST['total'] = $total++;
 	    
 	    
 	    if ( $ran_op == "0" ) {
