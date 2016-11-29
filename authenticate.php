@@ -94,7 +94,7 @@
     <div class="col-sm-4"></div>
 </div>
 <div class="row">
-    <div class="col-sm-4 col-sm-offset-4"><?php echo Score: $correct_score "/" $total_try ?></div>
+    <div class="col-sm-4 col-sm-offset-4"><?php echo 'Score: ' . $correct_score . ' / ' . $total_try; ?></div>
     <div class="col-sm-4"></div>
 </div>
     </div>
