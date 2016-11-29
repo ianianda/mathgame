@@ -12,13 +12,14 @@
     <div class="container">
     <form action="authenticate.php" method="post" role="form" class="form-horizontal">
         <?php
-	    $answer="";
 	    $operators = array('+','-');
 	    $ran_op = rand() % 2;
 	    $operator = $operators[$ran_op]; 
 	    $first_number = rand(0, 20);
 	    $second_number = rand(0, 20);
-	    $_SESSION['textboxError'] = false;    
+	    $_SESSION['textboxError'] = false;
+	    $correct_score = 0;
+	    $total_try = 0;
 	    
 	    if ( $ran_op == "0" ) {
 	        $key = $first_number + $second_number;
@@ -59,12 +60,14 @@
             <div class="col-sm-3 col-sm-offset-4">	
                 <input type="text" class="form-control" id="answer" name="answer" placeholder="Enter answer" size="6">
 	            <?php
-			if($_SESSION['textboxError'] == true) {
+			  if($_SESSION['textboxError'] == true) {
        			    echo "<font color='red'>You must enter a number for your answer.</font>";  
 			} else if ($_SESSION['key'] == $answer){
 			    echo "<font color='green'>Correct</font>";
+				  $correct_score++;
 			} else if ($_SESSION['key'] != $answer){
 			    echo '<span style="color: red; font-weight: bold;">INCORRECT, ' . $_SESSION['first_number'] . ' ' . $_SESSION['operator'] . ' ' . $_SESSION['second_number'] . ' is ' . $key . '.</span>';
+				  $total_try++;
 			}
 			$_SESSION['key'] = $key;
 		    $_SESSION['first_number'] = $first_number;
@@ -91,7 +94,7 @@
     <div class="col-sm-4"></div>
 </div>
 <div class="row">
-    <div class="col-sm-4 col-sm-offset-4">Score: 0 / 0</div>
+    <div class="col-sm-4 col-sm-offset-4"><?php echo Score: $correct_score "/" $total_try ?></div>
     <div class="col-sm-4"></div>
 </div>
     </div>
