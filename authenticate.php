@@ -52,11 +52,11 @@
     <input type="hidden" name="score" value="0" />
 
     <div class="form-group">
-        <div class="col-sm-3 col-sm-offset-4">
-		
+        <div class="col-sm-3 col-sm-offset-4">	
             <input type="text" class="form-control" id="answer" name="answer" placeholder="Enter answer" size="6">
         </div>
-        <div class="col-sm-5"><?php 
+        <div class="col-sm-5">
+		<?php 
 		if (isset($_SESSION['textboxError']) || $_SESSION['textboxError'] == true) {
                 echo "<font color='red'>You must enter a number for your answer.</font>";} 
 				
@@ -64,8 +64,7 @@
 		$answer = $first_number - $second_number;
 		echo "answer is $answer";   }
 		?>
-		</div>
-    </div>
+	</div>
     <div class="row">
         <div class="col-sm-3 col-sm-offset-4">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -74,6 +73,7 @@
         </div>
         <div class="col-sm-3"></div>
     </div>
+	</div>
 </form>
 <hr />
 <div class="row">
