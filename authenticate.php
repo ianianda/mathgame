@@ -43,9 +43,7 @@
 		<?php echo $first_number ?>
 	</label>
         <label class="col-sm-2">-</label>
-        <label name="ranum2" class="col-sm-2">
-	    <?php echo $second_number ?>
-	</label>
+        <label name="ranum2" class="col-sm-2"><?php echo $second_number ?></label>
         <div class="col-sm-3"></div>
     </div>
 
