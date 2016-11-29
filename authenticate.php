@@ -62,9 +62,8 @@
 				?>
   	          } else {
 		$answer = $first_number - $second_number;
-		echo "answer is $answer"; 
-	
-  }
+		echo "answer is $answer";   }
+		?>
 		</div>
     </div>
     <div class="row">
