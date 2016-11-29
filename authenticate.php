@@ -19,7 +19,7 @@
 	    $second_number = rand(0, 20);
 	    $_SESSION['textboxError'] = false;    
 	    
-	    if ( $ran_op = 0 ) {
+	    if ( $ran_op == 0 ) {
 	        $key = $first_number + $second_number;
 	    } else {
 	        $key = $first_number - $second_number;
