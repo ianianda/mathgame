@@ -33,7 +33,7 @@
 	        } else {
    		    $_SESSION['textboxError'] = true;
 		       }}
-	    $_SESSION['key'] = $key;
+	    
 	?>
 	
         <div class="row">
@@ -65,7 +65,7 @@
 			} else if ($_SESSION['key'] != $answer){
 			    echo "<font color='red'>INCorrect</font>";
 			}
-			
+			$_SESSION['key'] = $key;
 		?>
         </div>
         <div class="col-sm-5">
