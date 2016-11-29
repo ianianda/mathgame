@@ -71,15 +71,15 @@
 	            <?php
 		        if($_SESSION['textboxError'] == true) {
 			    echo "<font color='red'>You must enter a number for your answer.</font>";  
-			} else if ($_SESSION['key'] == $answer){
+			} else if ($key == $answer){
 			    $score++;
 			    $_SESSION['score'] = $score;
 			    echo '<span style="color: green;">Correct</span>';  
-			} else if ($_SESSION['key'] != $answer){
+			} else if ($key != $answer){
 			    echo '<span style="color: red; font-weight: bold;">INCORRECT, ' . $_SESSION['first_number'] . ' ' . $_SESSION['operator'] . ' ' . $_SESSION['second_number'] . ' is ' . $key . '.</span>';
 			}
 		    
-			$_SESSION['key'] = $key;
+			
 		        $_SESSION['first_number'] = $first_number;
 		        $_SESSION['second_number'] = $second_number;
 		        $_SESSION['operator'] = $operator;
