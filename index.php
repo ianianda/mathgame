@@ -84,6 +84,8 @@
 		        $_SESSION['first_number'] = $first_number;
 		        $_SESSION['second_number'] = $second_number;
 		        $_SESSION['operator'] = $operator;
+		        $total = $_POST['total'] + 1;
+		    
 		    ?>
             </div>
             <div class="col-sm-5"></div>
@@ -91,9 +93,6 @@
             <div class="col-sm-3 col-sm-offset-4">
 	        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <button type="submit" class="btn btn-primary btn-sm">Submit
-		    <?php
-			$total = $_POST['total'] + 1;
-		    ?>
 		    </button>
             </div>
             <div class="col-sm-3"></div>
