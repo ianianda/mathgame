@@ -39,9 +39,6 @@
 	        $key = $first_number - $second_number;
 	    }
 	    
-	    if (!isset($answer)){
-		    $answer == 1;
-	    }
 	    if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		if (is_numeric($_POST["answer"])) { //textbox is a number
 		    $answer = ($_POST["answer"]);
