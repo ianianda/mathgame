@@ -12,15 +12,16 @@
     <div class="container">
     <form action="authenticate.php" method="post" role="form" class="form-horizontal">
         <?php	    
-	    $last_first_number = $_POST['first_number'];
-  	    $last_second_number = $_POST['first_number'];
-            $last_operator = $_POST['operator'];
-            //$last_score = $_POST['score'];
-            //$last_total = $_POST['total'] + 1;  
+	    
 	    
 	    
 	
 	    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		    $last_first_number = $_POST['first_number'];
+  	    $last_second_number = $_POST['first_number'];
+            $last_operator = $_POST['operator'];
+            //$last_score = $_POST['score'];
+            //$last_total = $_POST['total'] + 1;  
   		if (is_numeric($_POST["answer"])) { //textbox is a number
 		    ($_POST["answer"] = $answer);
 			echo $answer;
