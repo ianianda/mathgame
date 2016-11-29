@@ -30,8 +30,8 @@
 	    $first_number = rand(0, 20);
 	    $second_number = rand(0, 20);
 	    $_SESSION['textboxError'] = false;
-	    $total = $_POST['total'];
-	    $score = $_POST['score'];
+	    $total = $_POST['total']-1;
+	    $score = $_POST['score']-1;
 	    	
 	    if ( $ran_op == "0" ) {
 	        $key = $first_number + $second_number;
