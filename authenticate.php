@@ -20,14 +20,15 @@
 	    $_SESSION['textboxError'] = false;    
 	    
 	    if ( $ran_op = 0 ) {
-	        $answer = $first_number + $second_number;
+	        $key = $first_number + $second_number;
 	    } else {
-	        $answer = $first_number - $second_number;
+	        $key = $first_number - $second_number;
 	    }
 	
 	    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  		if (is_numeric($_POST["textbox"])) { //textbox is a number
-		    $textbox = ($_POST["textbox"]);
+  		if (is_numeric($_POST["answer"])) { //textbox is a number
+		    $answer = $_POST["answer"];
+			       echo $answer);
 	        } else {
    		    $_SESSION['textboxError'] = true;
 		       }}
