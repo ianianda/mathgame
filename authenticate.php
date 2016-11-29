@@ -82,6 +82,10 @@
 	</div>
     <div class="row">
         <div class="col-sm-3 col-sm-offset-4">
+		<?php
+		$total_try++;
+		$_SESSION['total_try'] = $total_try;
+		?>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button type="submit" class="btn btn-primary btn-sm">
             Submit</button>
