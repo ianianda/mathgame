@@ -3,13 +3,13 @@
     <?php
         session_start();
 	
-        if (empty($_SESSION['score'])){
+        if (!isset($_SESSION['score'])){
 	    $score = 0;
 	} else {
 	    $score = $_SESSION['score'];
 	}
 	
-        if (empty($_SESSION['total'])){
+        if (!isset($_SESSION['total'])){
 	    $total = 0;
 	} else {
 	    $total = $_SESSION['total'];
@@ -30,8 +30,6 @@
 	    $first_number = rand(0, 20);
 	    $second_number = rand(0, 20);
 	    $_SESSION['textboxError'] = false;
-	    $total = $_POST['total'];
-	    $score = $_POST['score'];
 	    	
 	    if ( $ran_op == "0" ) {
 	        $key = $first_number + $second_number;
