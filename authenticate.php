@@ -18,7 +18,7 @@
 	    $first_number = rand(0, 20);
 	    $second_number = rand(0, 20);
 	    $_SESSION['textboxError'] = false;
-	    $score = $_POST['score'] +1;
+	    $score = $total = NULL;
 	    
 	    
 	    if ( $ran_op == "0" ) {
@@ -28,6 +28,8 @@
 	    }
 	
 	    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		    $total = $_POST["total"] +1;
+		    
   		if (is_numeric($_POST["answer"])) { //textbox is a number
 		    $answer = ($_POST["answer"]);
 			//echo $answer;
@@ -81,9 +83,7 @@
 	</div>
     <div class="row">
         <div class="col-sm-3 col-sm-offset-4">
-		<?php
-		$total++;
-		?>
+		
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button type="submit" class="btn btn-primary btn-sm">
             Submit</button>
