@@ -19,7 +19,7 @@
 	    $second_number = rand(0, 20);
 	    $_SESSION['textboxError'] = false;
 	    //$correct_score = $_POST["correct_score"];
-	    $total_try = $_POST["total_try"] + 1;
+	    $score = $_POST["score"] + 1;
 	    
 	    if ( $ran_op == "0" ) {
 	        $key = $first_number + $second_number;
@@ -74,7 +74,7 @@
 		    $_SESSION['first_number'] = $first_number;
 		    $_SESSION['second_number'] = $second_number;
 		    $_SESSION['operator'] = $operator;
-		    
+		    $_POST["score"]++;
 		    ?>
         </div>
         <div class="col-sm-5">
