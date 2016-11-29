@@ -22,7 +22,7 @@
 	
 	    if ($_SERVER["REQUEST_METHOD"] == "POST") {
   		if (is_numeric($_POST["answer"])) { //textbox is a number
-		    $answer = ($_POST["answer"]);
+		    ($_POST["answer"] = $answer);
 			echo $answer;
 			echo $key;
 	        } else {
