@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-    <form action="authenticate.php" method="post" role="form" class="form-horizontal">
+    <form action="index.php" method="post" role="form" class="form-horizontal">
         <?php
 	    $operators = array('+','-');
 	    $ran_op = rand() % 2;
