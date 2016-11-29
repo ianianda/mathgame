@@ -79,9 +79,8 @@
 		    $_SESSION['first_number'] = $first_number;
 		    $_SESSION['second_number'] = $second_number;
 		    $_SESSION['operator'] = $operator;
-		    if ($_SESSION['key'] == $answer){
-		    $score++;}
-		    $_POST['score'] = $score;
+		    
+		    //$_POST['score'] = $score;
 		    //$_POST['total'] = $total++;
 		    ?>
         </div>
