@@ -25,7 +25,7 @@
     <div class="form-group">
         <div class="col-sm-4 text-right">Password:</div>
         <div class="col-sm-3">
-            <input type="text" class="form-control" id="password" name="password" placeholder="Password" size="6">
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password" size="6">
         </div>
         <div class="col-sm-5"></div>
     </div>
