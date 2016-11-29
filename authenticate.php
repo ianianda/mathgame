@@ -32,7 +32,7 @@
 			$_SESSION['textbox'] = $textbox;}}
 	
 	if($_SESSION['textboxError']) {
-       		header("Location:index.php"); 
+       		header("Location:authenticate.php"); 
       		die();  }
 	?>
 	
