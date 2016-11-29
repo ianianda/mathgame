@@ -83,7 +83,7 @@
 				  $score++;
 				  $_SESSION['score'] = $score;
 			    echo "<font color='green'>Correct</font>";
-				  
+				echo $score;  
 				  
 			} else if ($_SESSION['key'] != $answer){
 				  // $score = $_POST['score'];
