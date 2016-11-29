@@ -72,7 +72,7 @@
 				  
 			} else if ($_SESSION['key'] != $answer){
 			    echo '<span style="color: red; font-weight: bold;">INCORRECT, ' . $_SESSION['first_number'] . ' ' . $_SESSION['operator'] . ' ' . $_SESSION['second_number'] . ' is ' . $key . '.</span>';
-			$total++;	  
+			//$total++;	  
 			}
 			$_SESSION['key'] = $key;
 		    $_SESSION['first_number'] = $first_number;
