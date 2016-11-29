@@ -29,7 +29,7 @@
   		if (is_numeric($_POST["answer"])) { //textbox is a number
 		    $answer = ($_POST["answer"]);
 			echo $answer;
-			echo $_POST["key"];
+			echo $key;
 	        } else {
    		    $_SESSION['textboxError'] = true;
 		       }}
@@ -59,7 +59,7 @@
 	            <?php
 			if($_SESSION['textboxError'] == true) {
        			    echo "<font color='red'>You must enter a number for your answer.</font>";  
-			} else if ($_SESSION['answer'] == $key){
+			} else if ($_SESSION['key'] == $answer){
 			    echo "<font color='green'>Correct</font>";
 			}
 			
