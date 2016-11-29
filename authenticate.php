@@ -1,21 +1,21 @@
 <!DOCTYPE HTML>
 <html lang="en">
-<?php
-    session_start();
-?>
-	<head>
-	<title>Math Game</title>
-    	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
-  	<meta charset="utf-8" />
+    <?php
+        session_start();
+    ?>
+<head>
+    <title>Math Game</title>
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <meta charset="utf-8" />
 </head>
 <body>
-    	<div class="container">
-<form action="authenticate.php" method="post" role="form" class="form-horizontal">
-
-	<?php
-	$ops = array('+','-');
-	$index = rand() % 2;
-	$operator = $ops[$index]; //
+    <div class="container">
+    <form action="authenticate.php" method="post" role="form" class="form-horizontal">
+        <?php
+	    $operators = array('+','-');
+	    $ran_op = rand() % 2;
+	    $operator = $operators[$index]; 
+	    echo $operator;//
 	//if($index == 0) a+b;
 	//$rand_key = array_rand($ops);
 	//$operator = $ops[$rand_key];
