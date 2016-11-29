@@ -39,9 +39,7 @@
         <div class="col-sm-4"><a href="logout.php" class="btn btn-default btn-sm">Logout</a></div>
     </div>
     <div class="row">
-        <label name="ranum1" class="col-sm-2 col-sm-offset-3">
-		<?php echo $first_number ?>
-	</label>
+        <label name="ranum1" class="col-sm-2 col-sm-offset-3"><?php echo $first_number ?></label>
         <label class="col-sm-2">-</label>
         <label name="ranum2" class="col-sm-2"><?php echo $second_number ?></label>
         <div class="col-sm-3"></div>
