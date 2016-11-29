@@ -13,7 +13,7 @@
     <div class="container">
     <form action="index.php" method="post" role="form" class="form-horizontal">
         <?php
-	    $score = $_POST['score'];
+	    $score = $last_score;
 	    $operators = array('+','-');
 	    $ran_op = rand() % 2;
 	    $operator = $operators[$ran_op]; 
@@ -31,7 +31,7 @@
 	    }
 	
 	    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		    $score = $_POST['score'];
+		    $last_score = $_POST['score'];
   		if (is_numeric($_POST["answer"])) { //textbox is a number
 		    $answer = ($_POST["answer"]);
 			//echo $answer;
@@ -65,11 +65,11 @@
                 <input type="text" class="form-control" id="answer" name="answer" placeholder="Enter answer" size="6">
 	            <?php
 			  if($_SESSION['textboxError'] == true) {
-				   $score = $_POST['score'];
+				   //$last_score = $_POST['score'];
        			    echo "<font color='red'>You must enter a number for your answer.</font>";
 				  
 			} else if ($_SESSION['key'] == $answer){
-				  $score++;
+				  $last_score++;
 			    echo "<font color='green'>Correct</font>";
 				  
 				  
