@@ -3,6 +3,8 @@
     <?php
         session_start();
 	
+	$total = 0;
+	
         if (empty($_SESSION['score'])){
 	    $score = 0;
 	} else {
@@ -10,7 +12,7 @@
 	}
 	
         //if (empty($_SESSION['total'])){
-	    $total = 0;
+	  //  $total = 0;
 	//} else {
 	  //  $total = $_SESSION['total'];
 	//}
