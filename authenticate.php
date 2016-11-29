@@ -19,9 +19,8 @@
 	$operator =- $ops[$rand_key];
 	$first_number = rand(0, 20);
 	$second_number = rand(0, 20);
-	$add_total = $first_number + $second_number;
-	$sub_total = $first_number - $second_number;
-	$textbox = "";
+	$add_answer = $first_number + $second_number;
+	$sub_answer = $first_number - $second_number;
 	$_SESSION['textboxError'] = false;
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
   		if (!empty($_POST["textbox"]) && (!is_numeric($_POST["textbox"]))) {
@@ -59,9 +58,8 @@
 		if (isset($_SESSION['textboxError']) || $_SESSION['textboxError'] == true) {
                 echo "<font color='red'>You must enter a number for your answer.</font>";} 
 				
-  	          } else {
-		$answer = $first_number - $second_number;
-		echo answer is $answer;   }
+  	          } else if ($textbox = $sub_answer){
+		echo your answer is right;}
 		?>
         </div>
         <div class="col-sm-5">
