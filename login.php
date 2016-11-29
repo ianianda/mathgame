@@ -36,6 +36,14 @@
     </div>
 </form>
 <div class="row">
+    <?php
+        if(isset($_GET['msg'])) {
+	    $msg = $_GET['msg'];
+	    urldecode($msg);
+	    echo '<p class="col-sm-3 col-sm-offset-4 text-danger">' . $msg . '</p>';
+	}
+    ?>
+
 </div>
     </div>
 </body>
