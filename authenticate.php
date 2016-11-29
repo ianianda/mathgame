@@ -19,7 +19,7 @@
 	    $second_number = rand(0, 20);
 	    $_SESSION['textboxError'] = false;
 	    $score = $_POST["score"];
-	    $total = $_POST["total"] +1;
+	    $total++;
 	    
 	    
 	    if ( $ran_op == "0" ) {
@@ -71,7 +71,7 @@
 				  
 			} else if ($_SESSION['key'] != $answer){
 			    echo '<span style="color: red; font-weight: bold;">INCORRECT, ' . $_SESSION['first_number'] . ' ' . $_SESSION['operator'] . ' ' . $_SESSION['second_number'] . ' is ' . $key . '.</span>';
-				  
+			$total++;	  
 			}
 			$_SESSION['key'] = $key;
 		    $_SESSION['first_number'] = $first_number;
