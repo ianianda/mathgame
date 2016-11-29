@@ -74,7 +74,7 @@
 		    $_SESSION['first_number'] = $first_number;
 		    $_SESSION['second_number'] = $second_number;
 		    $_SESSION['operator'] = $operator;
-		    $_POST['total'] = $total++;
+		    $total = $_POST['total'] +1;
 		    ?>
         </div>
         <div class="col-sm-5">
