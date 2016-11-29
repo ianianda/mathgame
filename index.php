@@ -17,6 +17,9 @@
             header("Location: index.php");
             die();
 }
+	
+	
+	
         if (!isset($_SESSION['score'])){
 	    $score = 0;
 	    $_SESSION['score'] = 0;
