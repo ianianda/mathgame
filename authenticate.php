@@ -40,11 +40,11 @@
     </div>
     <div class="row">
         <label name="ranum1" class="col-sm-2 col-sm-offset-3">
-		<?php $first_number ?>
+		<?php echo $first_number ?>
 	</label>
         <label class="col-sm-2">-</label>
         <label name="ranum2" class="col-sm-2">
-	    <?php $second_number ?>
+	    <?php echo $second_number ?>
 	</label>
         <div class="col-sm-3"></div>
     </div>
