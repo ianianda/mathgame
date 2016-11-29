@@ -30,7 +30,7 @@
 	    }
 	
 	    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		    $score = $_POST['score'];
+		    //$score = $_POST['score'];
   		if (is_numeric($_POST["answer"])) { //textbox is a number
 		    $answer = ($_POST["answer"]);
 			//echo $answer;
@@ -79,6 +79,8 @@
 		    $_SESSION['first_number'] = $first_number;
 		    $_SESSION['second_number'] = $second_number;
 		    $_SESSION['operator'] = $operator;
+		    if ($_SESSION['key'] == $answer){
+		    $score++;}
 		    $_POST['score'] = $score;
 		    //$_POST['total'] = $total++;
 		    ?>
