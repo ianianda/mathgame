@@ -18,8 +18,8 @@
 	    $first_number = rand(0, 20);
 	    $second_number = rand(0, 20);
 	    $_SESSION['textboxError'] = false;
-	    $correct_score = 0;
-	    $total_try = 0;
+	    $correct_score += $correct_score;
+	    $total_try += $total_try;
 	    
 	    if ( $ran_op == "0" ) {
 	        $key = $first_number + $second_number;
