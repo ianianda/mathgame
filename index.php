@@ -2,7 +2,7 @@
 <html lang="en">
     <?php
         session_start();
-        $score=NULL;
+        $score= $_POST['score'];
     ?>
 <head>
     <title>Math Game</title>
