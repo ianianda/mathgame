@@ -59,7 +59,7 @@
 	            <?php
 			if($_SESSION['textboxError'] == true) {
        			    echo "<font color='red'>You must enter a number for your answer.</font>";  
-			} else if ($answer == $key){
+			} else if ($_SESSION['answer'] == $key){
 			    echo "<font color='green'>Correct</font>";
 			}
 			
