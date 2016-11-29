@@ -28,8 +28,8 @@
 	    if ($_SERVER["REQUEST_METHOD"] == "POST") {
   		if (is_numeric($_POST["answer"])) { //textbox is a number
 		    $answer = ($_POST["answer"]);
-			echo $answer;
-			echo $_SESSION['key'];
+			//echo $answer;
+			//echo $_SESSION['key'];
 	        } else {
    		    $_SESSION['textboxError'] = true;
 		       }}
@@ -67,7 +67,9 @@
 			    echo $_SESSION['first_number']; 
 			}
 			$_SESSION['key'] = $key;
-		?>
+		    $_SESSION['first_number'] = $first_number;
+		    $_SESSION['second_number'] = $second_number;
+		    ?>
         </div>
         <div class="col-sm-5">
 	</div>
