@@ -3,7 +3,7 @@
     <?php
         session_start();
 	
-	$total = 0;
+	//$total = 0;
 	
         if (empty($_SESSION['score'])){
 	    $score = 0;
@@ -27,16 +27,13 @@
     <div class="container">
     <form action="index.php" method="post" role="form" class="form-horizontal">
         <?php
-	    //$last_score = $_POST['score'];
 	    $operators = array('+','-');
 	    $ran_op = rand() % 2;
 	    $operator = $operators[$ran_op]; 
 	    $first_number = rand(0, 20);
 	    $second_number = rand(0, 20);
 	    $_SESSION['textboxError'] = false;
-	    //$score = $_POST['score'];
 	    $total = $_POST['total'] + 1;
-	    
 	    
 	    if ( $ran_op == "0" ) {
 	        $key = $first_number + $second_number;
@@ -45,15 +42,11 @@
 	    }
 	
 	    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		    //$last_score = $_POST['score'];
-  		if (is_numeric($_POST["answer"])) { //textbox is a number
+		if (is_numeric($_POST["answer"])) { //textbox is a number
 		    $answer = ($_POST["answer"]);
-			//echo $answer;
-			//echo $_SESSION['key'];
 	        } else {
    		    $_SESSION['textboxError'] = true;
 		       }}
-	    
 	?>
 	
         <div class="row">
@@ -78,54 +71,41 @@
             <div class="col-sm-3 col-sm-offset-4">	
                 <input type="text" class="form-control" id="answer" name="answer" placeholder="Enter answer" size="6">
 	            <?php
-			  if($_SESSION['textboxError'] == true) {
-				   //$last_score = $_POST['score'];
-       			    echo "<font color='red'>You must enter a number for your answer.</font>";
-				  
+		        if($_SESSION['textboxError'] == true) {
+			    echo "<font color='red'>You must enter a number for your answer.</font>";  
 			} else if ($_SESSION['key'] == $answer){
-				  $score++;
-				  $_SESSION['score'] = $score;
-			    echo "<font color='green'>Correct</font>";
-				//echo $score;  
-				  
+			    $score++;
+			    $_SESSION['score'] = $score;
+			    echo '<span style="color: green;">Correct</span>';  
 			} else if ($_SESSION['key'] != $answer){
-				  // $score = $_POST['score'];
 			    echo '<span style="color: red; font-weight: bold;">INCORRECT, ' . $_SESSION['first_number'] . ' ' . $_SESSION['operator'] . ' ' . $_SESSION['second_number'] . ' is ' . $key . '.</span>';
-			//$total++;	  
 			}
+		    
 			$_SESSION['key'] = $key;
-		    $_SESSION['first_number'] = $first_number;
-		    $_SESSION['second_number'] = $second_number;
-		    $_SESSION['operator'] = $operator;
-		    //$score = $last_score;
-		    //$_POST['score'] = $score;
-		    //$_POST['total'] = $total++;
+		        $_SESSION['first_number'] = $first_number;
+		        $_SESSION['second_number'] = $second_number;
+		        $_SESSION['operator'] = $operator;
 		    ?>
-        </div>
-        <div class="col-sm-5">
-	</div>
-    <div class="row">
-        <div class="col-sm-3 col-sm-offset-4">
-		
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button type="submit" class="btn btn-primary btn-sm">
-            Submit</button>
-        </div>
-        <div class="col-sm-3"></div>
-        </div>
+            </div>
+            <div class="col-sm-5"></div>
+            <div class="row">
+            <div class="col-sm-3 col-sm-offset-4">
+	        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+            </div>
+            <div class="col-sm-3"></div>
+            </div>
 	</div>
 </form>
 <hr />
-<div class="row">
-    <div class="col-sm-4 col-sm-offset-4">
-            </div>
-    <div class="col-sm-4"></div>
-</div>
-<div class="row">
-    <div class="col-sm-4 col-sm-offset-4"><?php echo 'Score: ' . $score .  ' / ' . $total; ?></div>
-	
-    <div class="col-sm-4"></div>
-</div>
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4"></div>
+        <div class="col-sm-4"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4"><?php echo 'Score: ' . $score .  ' / ' . $total; ?></div>
+        <div class="col-sm-4"></div>
+    </div>
     </div>
 </body>
 </html>
