@@ -2,6 +2,7 @@
 <html lang="en">
     <?php
         session_start();
+	$score = NULL;
     ?>
 <head>
     <title>Math Game</title>
