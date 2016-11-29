@@ -18,8 +18,8 @@
 	    $first_number = rand(0, 20);
 	    $second_number = rand(0, 20);
 	    $_SESSION['textboxError'] = false;
-	    $correct_score = $_POST["correct_score"];
-	    $total_try = $_POST["total_try"] + 1;
+	    //$correct_score = $_POST["correct_score"];
+	    //$total_try = $_POST["total_try"] + 1;
 	    
 	    if ( $ran_op == "0" ) {
 	        $key = $first_number + $second_number;
@@ -73,6 +73,7 @@
 		    $_SESSION['first_number'] = $first_number;
 		    $_SESSION['second_number'] = $second_number;
 		    $_SESSION['operator'] = $operator;
+		    $_SESSION['total_try'] = $total_try + 1;
 		    ?>
         </div>
         <div class="col-sm-5">
@@ -94,7 +95,7 @@
     <div class="col-sm-4"></div>
 </div>
 <div class="row">
-    <div class="col-sm-4 col-sm-offset-4"><?php echo 'Score: ' . $correct_score . ' / ' . $total_try; ?></div>
+    <div class="col-sm-4 col-sm-offset-4"><?php echo 'Score: ' . $correct_score . ' / ' . $_SESSION['total_try']; ?></div>
     <div class="col-sm-4"></div>
 </div>
     </div>
