@@ -101,7 +101,10 @@
     <div class="col-sm-4"></div>
 </div>
 <div class="row">
-    <div class="col-sm-4 col-sm-offset-4"><?php echo 'Score: ' . $score . ' ' . $_POST["score"] . ' ' . $_SESSION['score'] . ' / ' . $total; ?></div>
+    <div class="col-sm-4 col-sm-offset-4"><?php echo 'Score: ' . $score .  ' / ' . $total; ?></div>
+	<?php
+	' ' . $_POST["score"] . ' ' . $_SESSION['score'] .
+	?>
     <div class="col-sm-4"></div>
 </div>
     </div>
