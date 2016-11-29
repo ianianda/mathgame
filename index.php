@@ -69,7 +69,8 @@
             <div class="col-sm-3 col-sm-offset-4">	
                 <input type="text" class="form-control" id="answer" name="answer" placeholder="Enter answer" size="6">
 	            <?php
-		        if($_SESSION['textboxError'] == true) {
+		       if (isset($_POST['submit'])){
+			 if($_SESSION['textboxError'] == true) {
 			    echo "<font color='red'>You must enter a number for your answer.</font>";  
 			} else if ($_SESSION['key'] == $answer){
 			    $score++;
@@ -86,7 +87,8 @@
 		    
 				$total++;
 				$_SESSION['total'] = $total;
-		        //$total = $_POST['total'] + 1;
+		        //$total = $_POST['total'] + 1;       
+		       }
 		    
 		    ?>
             </div>
@@ -94,7 +96,7 @@
             <div class="row">
             <div class="col-sm-3 col-sm-offset-4">
 	        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <button type="submit" class="btn btn-primary btn-sm">Submit
+                <button type="submit" name="submit" class="btn btn-primary btn-sm">Submit
 		    </button>
             </div>
             <div class="col-sm-3"></div>
