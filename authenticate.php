@@ -11,7 +11,13 @@
 <body>
     <div class="container">
     <form action="authenticate.php" method="post" role="form" class="form-horizontal">
-        <?php
+        <?php	    
+	    $last_first_number = $_POST['first_number'];
+  	    $last_second_number = $_POST['first_number'];
+            $last_operator = $_POST['operator'];
+            //$last_score = $_POST['score'];
+            //$last_total = $_POST['total'] + 1;
+
 	    $operators = array('+','-');
 	    $ran_op = rand() % 2;
 	    $operator = $operators[$ran_op]; 
@@ -20,9 +26,9 @@
 	    $_SESSION['textboxError'] = false;    
 	    
 	    if ( $ran_op == 0 ) {
-	        $key = $first_number + $second_number;
+	        $key = $last_first_number + $last_second_number;
 	    } else {
-	        $key = $first_number - $second_number;
+	        $key = $last_first_number - $last_second_number;
 	    }
 	
 	    if ($_SERVER["REQUEST_METHOD"] == "POST") {
