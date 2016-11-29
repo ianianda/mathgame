@@ -32,7 +32,7 @@
 	    $first_number = rand(0, 20);
 	    $second_number = rand(0, 20);
 	    $_SESSION['textboxError'] = false;
-	    $total = $_POST['total'] + 1 -1;
+	    //$total = $_POST['total'] + 1;
 	    	
 	    if ( $ran_op == "0" ) {
 	        $key = $first_number + $second_number;
@@ -90,7 +90,11 @@
             <div class="row">
             <div class="col-sm-3 col-sm-offset-4">
 	        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                <button type="submit" class="btn btn-primary btn-sm">Submit
+		    <?php
+			$total = $_POST['total'] + 1;
+		    ?>
+		    </button>
             </div>
             <div class="col-sm-3"></div>
             </div>
