@@ -3,7 +3,8 @@
     <?php
         session_start();
 	
-	//$total = 0;
+	$total = 0;
+	$score = 0;
 	
         if (empty($_SESSION['score'])){
 	    $score = 0;
