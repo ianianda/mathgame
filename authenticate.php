@@ -63,12 +63,12 @@
 			} else if ($_SESSION['key'] == $answer){
 			    echo "<font color='green'>Correct</font>";
 			} else if ($_SESSION['key'] != $answer){
-			    echo "<font color='red'>Incorrect. $_SESSION['first_number'] </font>" ;
-			    echo $_SESSION['first_number']; 
+			    echo '<span style="color: red; font-weight: bold;">INCORRECT, ' . $_SESSION['first_number'] . ' ' . $_SESSION['operator'] . ' ' . $_SESSION['second_number'] . ' is ' . $answer . '.</span>';
 			}
 			$_SESSION['key'] = $key;
 		    $_SESSION['first_number'] = $first_number;
 		    $_SESSION['second_number'] = $second_number;
+		    $_SESSION['operator'] = $operator;
 		    ?>
         </div>
         <div class="col-sm-5">
