@@ -20,9 +20,9 @@
 	    $_SESSION['textboxError'] = false;    
 	    
 	    if ( $ran_op = 0 ) {
-	        $key = $first_number + $second_number;
-	    } else {
 	        $key = $first_number - $second_number;
+	    } else {
+	        $key = $first_number + $second_number;
 	    }
 	
 	    if ($_SERVER["REQUEST_METHOD"] == "POST") {
