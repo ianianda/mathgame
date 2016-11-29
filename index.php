@@ -18,7 +18,7 @@
 	    $first_number = rand(0, 20);
 	    $second_number = rand(0, 20);
 	    $_SESSION['textboxError'] = false;
-	    $_POST["score"] = $score;
+	    $score = $_SESSION['score'];
 	    $_POST['total'] = $total++;
 	    
 	    
@@ -67,7 +67,7 @@
 				  
 			} else if ($_SESSION['key'] == $answer){
 			    echo "<font color='green'>Correct</font>";
-				  ++$score;
+				  $score++;
 				  
 			} else if ($_SESSION['key'] != $answer){
 			    echo '<span style="color: red; font-weight: bold;">INCORRECT, ' . $_SESSION['first_number'] . ' ' . $_SESSION['operator'] . ' ' . $_SESSION['second_number'] . ' is ' . $key . '.</span>';
@@ -77,7 +77,7 @@
 		    $_SESSION['first_number'] = $first_number;
 		    $_SESSION['second_number'] = $second_number;
 		    $_SESSION['operator'] = $operator;
-		    $_POST['score'] = $score;
+		    $_SESSION['score'] = $score;
 		    $_POST['total'] = $total++;
 		    ?>
         </div>
@@ -103,7 +103,7 @@
 <div class="row">
     <div class="col-sm-4 col-sm-offset-4"><?php echo 'Score: ' . $score .  ' / ' . $total; ?></div>
 	<?php
-	echo $_POST["score"] . ' ' . $_SESSION['score'];
+	echo $_SESSION['score'];
 	?>
     <div class="col-sm-4"></div>
 </div>
