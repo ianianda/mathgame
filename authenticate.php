@@ -19,7 +19,7 @@
 	    $second_number = rand(0, 20);
 	    $_SESSION['textboxError'] = false;
 	    //$correct_score = $_POST["correct_score"];
-	    $score = $_POST["score"] + 1;
+	    $score = $_SESSION['score'] + 1;
 	    
 	    if ( $ran_op == "0" ) {
 	        $key = $first_number + $second_number;
@@ -54,7 +54,7 @@
         <input type="hidden" name="operation" value="-" />
         <input type="hidden" name="second_number" value="3" />
         <input type="hidden" name="total" value="0" />
-        <input type="hidden" name="score" value="0" />
+        <input type="hidden" name="score" value="2" />
 
         <div class="form-group">
             <div class="col-sm-3 col-sm-offset-4">	
@@ -74,7 +74,7 @@
 		    $_SESSION['first_number'] = $first_number;
 		    $_SESSION['second_number'] = $second_number;
 		    $_SESSION['operator'] = $operator;
-		    $_POST["score"]++;
+		    $_SESSION['score'] = $score++;
 		    ?>
         </div>
         <div class="col-sm-5">
