@@ -2,10 +2,9 @@
 <html lang="en">
     <?php
         session_start();
-	session_destroy();
 	
-	$total = 0;
-	$score = 0;
+	$_SESSION['total'] = 0;
+	$_SESSION['score'] = 0;
 	
         if (empty($_SESSION['score'])){
 	    $score = 0;
