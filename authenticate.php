@@ -54,6 +54,15 @@
     <div class="form-group">
         <div class="col-sm-3 col-sm-offset-4">	
             <input type="text" class="form-control" id="answer" name="answer" placeholder="Enter answer" size="6">
+		
+		<?php 
+		if (isset($_SESSION['textboxError']) || $_SESSION['textboxError'] == true) {
+                echo "<font color='red'>You must enter a number for your answer.</font>";} 
+				
+  	          } else {
+		$answer = $first_number - $second_number;
+		echo answer is $answer;   }
+		?>
         </div>
         <div class="col-sm-5">
 	</div>
@@ -64,7 +73,7 @@
             Submit</button>
         </div>
         <div class="col-sm-3"></div>
-    </div>
+        </div>
 	</div>
 </form>
 <hr />
