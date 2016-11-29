@@ -28,7 +28,8 @@
   		if (!empty($_POST["textbox"]) && (!is_numeric($_POST["textbox"]))) {
     			$_SESSION['textboxError'] = true;
 	      } else {
-   			$textbox = ($_POST["textbox"]);}}
+   			$textbox = ($_POST["textbox"]);
+			$_SESSION['textbox'] = $textbox;}}
 	
 	if($_SESSION['textboxError']) {
        		header("Location:index.php"); 
@@ -61,7 +62,7 @@
 		if (isset($_SESSION['textboxError']) && $_SESSION['textboxError'] == true) {
                 	echo "<font color='red'>You must enter a number for your answer.</font>";
 		} 	
-  	        else if (!empty($_POST["textbox"]) || $_POST["textbox"] != $sub_answer){
+  	        else if ($_SESSION['textbox'] != $sub_answer){
 			echo "your answer is incorrect";
 		}
 		?>
