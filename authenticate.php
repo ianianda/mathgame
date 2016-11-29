@@ -63,7 +63,7 @@
 			} else if ($_SESSION['key'] == $answer){
 			    echo "<font color='green'>Correct</font>";
 			} else if ($_SESSION['key'] != $answer){
-			    echo "<font color='red'>Incorrect.</font>";
+			    echo "<font color='red'>Incorrect. </font>" $_SESSION['first_number'];
 			    echo $_SESSION['first_number']; 
 			}
 			$_SESSION['key'] = $key;
