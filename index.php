@@ -75,10 +75,10 @@
 			} else if ($_SESSION['key'] == $answer){
 			    $score++;
 			    $_SESSION['score'] = $score;
-				$total = $_POST['total'] + 1;
+				$total++;
 			    echo '<span style="color: green;">Correct</span>';  
 			} else if ($_SESSION['key'] != $answer){
-				$total = $_POST['total'] + 1;
+				$total++;
 			    echo '<span style="color: red; font-weight: bold;">INCORRECT, ' . $_SESSION['first_number'] . ' ' . $_SESSION['operator'] . ' ' . $_SESSION['second_number'] . ' is ' . $key . '.</span>';
 			}
 		    
