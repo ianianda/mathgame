@@ -29,7 +29,7 @@
   		if (is_numeric($_POST["answer"])) { //textbox is a number
 		    $answer = ($_POST["answer"]);
 			echo $answer;
-			echo $key;
+			echo $_POST["key"];
 	        } else {
    		    $_SESSION['textboxError'] = true;
 		       }}
