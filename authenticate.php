@@ -62,9 +62,9 @@
 		if (isset($_SESSION['textboxError']) && $_SESSION['textboxError'] == true) {
                 	echo "<font color='red'>You must enter a number for your answer.</font>";
 		} 	
-  	        else if ($_POST['textbox'] != $sub_answer){
-			echo "your answer is incorrect";
-		}
+  	        //else if ($_POST['textbox'] != $sub_answer){
+		//	echo "your answer is incorrect";
+		//}
 		?>
         </div>
         <div class="col-sm-5">
