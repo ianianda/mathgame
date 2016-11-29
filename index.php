@@ -2,7 +2,7 @@
 <html lang="en">
     <?php
         session_start();
-	$score = NULL;
+	
     ?>
 <head>
     <title>Math Game</title>
@@ -78,7 +78,7 @@
 		    $_SESSION['first_number'] = $first_number;
 		    $_SESSION['second_number'] = $second_number;
 		    $_SESSION['operator'] = $operator;
-		    //$_SESSION['score'] = $score;
+		    $_POST['score'] = $score;
 		    //$_POST['total'] = $total++;
 		    ?>
         </div>
@@ -104,7 +104,7 @@
 <div class="row">
     <div class="col-sm-4 col-sm-offset-4"><?php echo 'Score: ' . $score .  ' / ' . $total; ?></div>
 	<?php
-	echo $_SESSION['score'];
+	echo $_POST['score'];
 	?>
     <div class="col-sm-4"></div>
 </div>
