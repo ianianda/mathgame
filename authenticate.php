@@ -18,11 +18,7 @@
             //$last_score = $_POST['score'];
             //$last_total = $_POST['total'] + 1;  
 	    
-	    if ( $ran_op == 0 ) {
-	        $key = $last_first_number + $last_second_number;
-	    } else {
-	        $key = $last_first_number - $last_second_number;
-	    }
+	    
 	
 	    if ($_SERVER["REQUEST_METHOD"] == "POST") {
   		if (is_numeric($_POST["answer"])) { //textbox is a number
@@ -38,7 +34,13 @@
 	    $operator = $operators[$ran_op]; 
 	    $first_number = rand(0, 20);
 	    $second_number = rand(0, 20);
-	    $_SESSION['textboxError'] = false;  
+	    $_SESSION['textboxError'] = false;
+	    
+	    if ( $ran_op == 0 ) {
+	        $key = $last_first_number + $last_second_number;
+	    } else {
+	        $key = $last_first_number - $last_second_number;
+	    }
 	?>
 	
         <div class="row">
