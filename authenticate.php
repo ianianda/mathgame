@@ -18,7 +18,7 @@
 	    $first_number = rand(0, 20);
 	    $second_number = rand(0, 20);
 	    $_SESSION['textboxError'] = false;
-	    $score = $_SESSION['score'] +1;
+	    $score = $_POST['score'] +1;
 	    
 	    
 	    if ( $ran_op == "0" ) {
@@ -74,7 +74,7 @@
 		    $_SESSION['first_number'] = $first_number;
 		    $_SESSION['second_number'] = $second_number;
 		    $_SESSION['operator'] = $operator;
-		    $_SESSION['total'] = $total++;
+		    $_POST['total'] = $total++;
 		    ?>
         </div>
         <div class="col-sm-5">
