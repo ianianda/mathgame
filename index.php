@@ -88,6 +88,9 @@
 		        $_SESSION['first_number'] = $first_number;
 		        $_SESSION['second_number'] = $second_number;
 		        $_SESSION['operator'] = $operator;
+		    
+				$total++;
+				$_SESSION['total'] = $total;
 		        //$total = $_POST['total'] + 1;
 		    
 		    ?>
