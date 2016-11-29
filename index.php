@@ -19,7 +19,7 @@
 	    $first_number = rand(0, 20);
 	    $second_number = rand(0, 20);
 	    $_SESSION['textboxError'] = false;
-	    $score = $_POST['score'];
+	    //$score = $_POST['score'];
 	    $total = $_POST['total'] + 1;
 	    
 	    
@@ -30,7 +30,7 @@
 	    }
 	
 	    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		    //$score = $_POST['score'];
+		    $score = $_POST['score'];
   		if (is_numeric($_POST["answer"])) { //textbox is a number
 		    $answer = ($_POST["answer"]);
 			//echo $answer;
