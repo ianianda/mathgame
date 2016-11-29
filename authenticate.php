@@ -11,37 +11,28 @@
 <body>
     <div class="container">
     <form action="authenticate.php" method="post" role="form" class="form-horizontal">
-        <?php	    
-	    
-	    
-	    
-	
-	    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		    $last_first_number = $_POST['first_number'];
-  	    $last_second_number = $_POST['first_number'];
-            $last_operator = $_POST['operator'];
-            //$last_score = $_POST['score'];
-            //$last_total = $_POST['total'] + 1;  
-  		if (is_numeric($_POST["answer"])) { //textbox is a number
-		    $_POST["answer"] = $answer;
-			echo $answer;
-			echo $key;
-	        } else {
-   		    $_SESSION['textboxError'] = true;
-		       }}
-	    
+        <?php
 	    $operators = array('+','-');
 	    $ran_op = rand() % 2;
 	    $operator = $operators[$ran_op]; 
 	    $first_number = rand(0, 20);
 	    $second_number = rand(0, 20);
-	    $_SESSION['textboxError'] = false;
+	    $_SESSION['textboxError'] = false;    
 	    
-	    if ( $ran_op == 0 ) {
-	        $key = $last_first_number + $last_second_number;
+	    if ( $ran_op = 0 ) {
+	        $key = $first_number + $second_number;
 	    } else {
-	        $key = $last_first_number - $last_second_number;
+	        $key = $first_number - $second_number;
 	    }
+	
+	    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  		if (is_numeric($_POST["answer"])) { //textbox is a number
+		    $answer = ($_POST["answer"]);
+			echo $answer;
+			echo $key;
+	        } else {
+   		    $_SESSION['textboxError'] = true;
+		       }}
 	?>
 	
         <div class="row">
@@ -68,7 +59,7 @@
 	            <?php
 			if($_SESSION['textboxError'] == true) {
        			    echo "<font color='red'>You must enter a number for your answer.</font>";  
-			} else if ($_POST["answer"] == $key){
+			} else if ($answer == $key){
 			    echo "<font color='green'>Correct</font>";
 			}
 			
