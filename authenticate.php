@@ -3,18 +3,20 @@
 ?>
 <!DOCTYPE HTML>
 <html lang="en">
-
 <head>
 	<title>Math Game</title>
-    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
-  <meta charset="utf-8" />
+    	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+  	<meta charset="utf-8" />
 </head>
 <body>
-    <div class="container">
+    	<div class="container">
 <form action="authenticate.php" method="post" role="form" class="form-horizontal">
 
 	<?php
 	$ops = array('+','-');
+	$index = rand() % 2;
+	 $ops[$index];
+	//if($index == 0) a+b;
 	$rand_key = array_rand($ops);
 	$operator =- $ops[$rand_key];
 	$first_number = rand(0, 20);
@@ -58,7 +60,7 @@
 		if (isset($_SESSION['textboxError']) || $_SESSION['textboxError'] == true) {
                 echo "<font color='red'>You must enter a number for your answer.</font>";} 	
   	        else if ($textbox != $sub_answer){
-		echo your answer is incorrect;}
+		echo "your answer is incorrect";}
 		?>
         </div>
         <div class="col-sm-5">
