@@ -2,7 +2,7 @@
 <html lang="en">
     <?php
         session_start();
-        $score= $_POST['score'];
+        //$score= $_POST['score'];
     ?>
 <head>
     <title>Math Game</title>
@@ -13,7 +13,7 @@
     <div class="container">
     <form action="index.php" method="post" role="form" class="form-horizontal">
         <?php
-	    $score = $last_score;
+	    $last_score = $_POST['score'];
 	    $operators = array('+','-');
 	    $ran_op = rand() % 2;
 	    $operator = $operators[$ran_op]; 
@@ -31,7 +31,7 @@
 	    }
 	
 	    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		    $last_score = $_POST['score'];
+		    //$last_score = $_POST['score'];
   		if (is_numeric($_POST["answer"])) { //textbox is a number
 		    $answer = ($_POST["answer"]);
 			//echo $answer;
@@ -74,7 +74,7 @@
 				  
 				  
 			} else if ($_SESSION['key'] != $answer){
-				   $score = $_POST['score'];
+				  // $score = $_POST['score'];
 			    echo '<span style="color: red; font-weight: bold;">INCORRECT, ' . $_SESSION['first_number'] . ' ' . $_SESSION['operator'] . ' ' . $_SESSION['second_number'] . ' is ' . $key . '.</span>';
 			//$total++;	  
 			}
@@ -82,7 +82,7 @@
 		    $_SESSION['first_number'] = $first_number;
 		    $_SESSION['second_number'] = $second_number;
 		    $_SESSION['operator'] = $operator;
-		    
+		    $score = $last_score;
 		    //$_POST['score'] = $score;
 		    //$_POST['total'] = $total++;
 		    ?>
