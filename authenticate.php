@@ -1,9 +1,9 @@
+<!DOCTYPE HTML>
+<html lang="en">
 <?php
     session_start();
 ?>
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
+	<head>
 	<title>Math Game</title>
     	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
   	<meta charset="utf-8" />
@@ -25,7 +25,7 @@
 	$sub_answer = $first_number - $second_number;
 	$_SESSION['textboxError'] = false;
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  		if (!empty($_POST["textbox"]) && (!is_numeric($_POST["textbox"]))) {
+  		if (empty($_POST["textbox"]) || (!is_numeric($_POST["textbox"]))) {
     			$_SESSION['textboxError'] = true;
 	      } else {
    			$textbox = ($_POST["textbox"]);
