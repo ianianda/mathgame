@@ -107,7 +107,7 @@
     <div class="col-sm-4"></div>
 </div>
 <div class="row">
-    <div class="col-sm-4 col-sm-offset-4"><?php echo 'Score: ' . $score .  ' / ' . $total; ?></div>
+    <div class="col-sm-4 col-sm-offset-4"><?php echo 'Score: ' . $last_score .  ' / ' . $total; ?></div>
 	<?php
 	echo $_POST['score'];
 	?>
