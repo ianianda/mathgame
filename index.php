@@ -11,11 +11,11 @@
 	    $score = $_SESSION['score'];
 	}
 	
-        //if (empty($_SESSION['total'])){
-	  //  $total = 0;
-	//} else {
-	  //  $total = $_SESSION['total'];
-	//}
+        if (empty($_SESSION['total'])){
+	    $total = 0;
+	} else {
+	    $total = $_SESSION['total'];
+	}
 	//$score= $_POST['score'];
     ?>
 <head>
