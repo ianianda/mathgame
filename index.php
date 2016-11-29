@@ -13,6 +13,7 @@
     <div class="container">
     <form action="index.php" method="post" role="form" class="form-horizontal">
         <?php
+	    $score = $_POST['score'];
 	    $operators = array('+','-');
 	    $ran_op = rand() % 2;
 	    $operator = $operators[$ran_op]; 
