@@ -31,8 +31,7 @@
    			$textbox = ($_POST["textbox"]);
 			$_SESSION['textbox'] = $textbox;}}
 	
-	if($_SESSION['textboxError']) {
-       		echo "<font color='red'>You must enter a number for your answer.</font>";  }
+	
 	?>
 	
 	<div class="row">
@@ -55,7 +54,10 @@
     <div class="form-group">
         <div class="col-sm-3 col-sm-offset-4">	
             <input type="text" class="form-control" id="answer" name="answer" placeholder="Enter answer" size="6">
-		
+	<?php
+		if($_SESSION['textboxError']) {
+       		echo "<font color='red'>You must enter a number for your answer.</font>";  }
+		?>
         </div>
         <div class="col-sm-5">
 	</div>
