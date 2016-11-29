@@ -26,10 +26,10 @@
 	    }
 	
 	    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  		if (empty($_POST["textbox"]) || (!is_numeric($_POST["textbox"]))) { //textbox is empty or not a number
-    		    $_SESSION['textboxError'] = true;
+  		if (is_numeric($_POST["textbox"])) { //textbox is a number
+		    $textbox = ($_POST["textbox"]);
 	        } else {
-   		    $textbox = ($_POST["textbox"]);
+   		    $_SESSION['textboxError'] = true;
 		       }}
 	?>
 	
