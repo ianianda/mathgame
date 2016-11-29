@@ -72,7 +72,7 @@
 		        if($_SESSION['textboxError'] == true) {
 			    echo "<font color='red'>You must enter a number for your answer.</font>";  
 			} else if ($_SESSION['key'] == $answer){
-			    
+			    $score++;
 			    $_SESSION['score'] = $score;
 			    echo '<span style="color: green;">Correct</span>';  
 			} else if ($_SESSION['key'] != $answer){
