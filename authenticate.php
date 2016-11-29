@@ -19,8 +19,7 @@
 	    $second_number = rand(0, 20);
 	    $_SESSION['textboxError'] = false;
 	    //$correct_score = $_POST["correct_score"];
-	    $score = $_SESSION['score'];
-	    $total = $_SESSION['total'] + 1;
+	    
 	    
 	    if ( $ran_op == "0" ) {
 	        $key = $first_number + $second_number;
