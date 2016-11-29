@@ -59,7 +59,7 @@
 		
 		<?php 
 		$sub_answer =0;
-		if ($_SESSION['textboxError'] == true;) {
+		if ($_SESSION['textboxError'] = true;) {
                 	echo "<font color='red'>You must enter a number for your answer.</font>";
 		} 	
   	        //else if ($_POST['textbox'] != $sub_answer){
