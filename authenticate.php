@@ -55,7 +55,7 @@
             <div class="col-sm-3 col-sm-offset-4">	
                 <input type="text" class="form-control" id="answer" name="answer" placeholder="Enter answer" size="6">
 	            <?php
-			if($_SESSION['textboxError']) {
+			if($_SESSION['textboxError'] == true) {
        			    echo "<font color='red'>You must enter a number for your answer.</font>";  
 			} else if ($textbox == $answer){
 			    echo "<font color='green'>Correct</font>";
