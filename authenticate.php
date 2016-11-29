@@ -33,6 +33,7 @@
 	        } else {
    		    $_SESSION['textboxError'] = true;
 		       }}
+	    $_SESSION['key'] = $key;
 	?>
 	
         <div class="row">
