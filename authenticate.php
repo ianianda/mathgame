@@ -14,7 +14,7 @@
         <?php
 	    $operators = array('+','-');
 	    $ran_op = rand() % 2;
-	    $operator = $operators[$index]; 
+	    $operator = $operators[$ran_op]; 
 	    //
 	//if($index == 0) a+b;
 	//$rand_key = array_rand($ops);
