@@ -32,8 +32,7 @@
 			$_SESSION['textbox'] = $textbox;}}
 	
 	if($_SESSION['textboxError']) {
-       		header("Location:authenticate.php"); 
-      		die();  }
+       		echo "<font color='red'>You must enter a number for your answer.</font>";  }
 	?>
 	
 	<div class="row">
