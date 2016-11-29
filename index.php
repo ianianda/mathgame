@@ -8,11 +8,11 @@
 	$score = $_SESSION['score'];
 	}
 	
-        //if (empty($_SESSION['total'])){
-	//$total = 0;
-	//} else {
-	//$total = $_SESSION['total'];
-	//}
+        if (empty($_SESSION['total'])){
+	$total = 0;
+	} else {
+	$total = $_SESSION['total'];
+	}
 	//$score= $_POST['score'];
     ?>
 <head>
@@ -120,9 +120,7 @@
 </div>
 <div class="row">
     <div class="col-sm-4 col-sm-offset-4"><?php echo 'Score: ' . $score .  ' / ' . $total; ?></div>
-	<?php
-	echo $_POST['score'];
-	?>
+	
     <div class="col-sm-4"></div>
 </div>
     </div>
