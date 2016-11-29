@@ -15,49 +15,52 @@
 	    $operators = array('+','-');
 	    $ran_op = rand() % 2;
 	    $operator = $operators[$ran_op]; 
-	    //
-	//if($index == 0) a+b;
-	//$rand_key = array_rand($ops);
-	//$operator = $ops[$rand_key];
-	$first_number = rand(0, 20);
-	$second_number = rand(0, 20);
-	$add_answer = $first_number + $second_number;
-	$sub_answer = $first_number - $second_number;
-	$_SESSION['textboxError'] = false;
-	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  		if (empty($_POST["textbox"]) || (!is_numeric($_POST["textbox"]))) {
-    			$_SESSION['textboxError'] = true;
-	      } else {
-   			$textbox = ($_POST["textbox"]);
-			$_SESSION['textbox'] = $textbox;}}
+	    $first_number = rand(0, 20);
+	    $second_number = rand(0, 20);
+	    $_SESSION['textboxError'] = false;    
+	    
+	    if ( $ran_op = 0 ) {
+	        $answer = $first_number + $second_number;
+	    } else {
+	        $answer = $first_number - $second_number;
+	    }
 	
-	
+	    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  		if (empty($_POST["textbox"]) || (!is_numeric($_POST["textbox"]))) { //textbox is empty or not a number
+    		    $_SESSION['textboxError'] = true;
+	        } else {
+   		    $textbox = ($_POST["textbox"]);
+		       }}
 	?>
 	
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-4"><h1>Math Game</h1></div>
+            <div class="col-sm-4"><a href="logout.php" class="btn btn-default btn-sm">Logout</a></div>
+        </div>
+        
 	<div class="row">
-        <div class="col-sm-4 col-sm-offset-4"><h1>Math Game</h1></div>
-        <div class="col-sm-4"><a href="logout.php" class="btn btn-default btn-sm">Logout</a></div>
-    </div>
-    <div class="row">
-        <label name="ranum1" class="col-sm-2 col-sm-offset-3"><?php echo $first_number ?></label>
-        <label class="col-sm-2">-</label>
-        <label name="ranum2" class="col-sm-2"><?php echo $second_number ?></label>
-        <div class="col-sm-3"></div>
-    </div>
+            <label name="ranum1" class="col-sm-2 col-sm-offset-3"><?php echo $first_number ?></label> <!--show first random number-->
+            <label class="col-sm-2"><?php echo $operator ?></label> <!--show random operator-->
+            <label name="ranum2" class="col-sm-2"><?php echo $second_number ?></label> <!--show second random number-->
+            <div class="col-sm-3"></div>
+        </div>
+	<!-- why we need a hidden area? -->    
+        <input type="hidden" name="first_number" value="8" />
+        <input type="hidden" name="operation" value="-" />
+        <input type="hidden" name="second_number" value="3" />
+        <input type="hidden" name="total" value="0" />
+        <input type="hidden" name="score" value="0" />
 
-    <input type="hidden" name="first_number" value="8" />
-    <input type="hidden" name="operation" value="-" />
-    <input type="hidden" name="second_number" value="3" />
-    <input type="hidden" name="total" value="0" />
-    <input type="hidden" name="score" value="0" />
-
-    <div class="form-group">
-        <div class="col-sm-3 col-sm-offset-4">	
-            <input type="text" class="form-control" id="answer" name="answer" placeholder="Enter answer" size="6">
-	<?php
-		if($_SESSION['textboxError']) {
-       		echo "<font color='red'>You must enter a number for your answer.</font>";  }
-		echo $operator;
+        <div class="form-group">
+            <div class="col-sm-3 col-sm-offset-4">	
+                <input type="text" class="form-control" id="answer" name="answer" placeholder="Enter answer" size="6">
+	            <?php
+			if($_SESSION['textboxError']) {
+       			    echo "<font color='red'>You must enter a number for your answer.</font>";  
+			} else if ($textbox == $answer){
+			    echo "<font color='green'>Correct</font>";
+			}
+			
 		?>
         </div>
         <div class="col-sm-5">
