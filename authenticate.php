@@ -18,7 +18,7 @@
 	    $first_number = rand(0, 20);
 	    $second_number = rand(0, 20);
 	    $_SESSION['textboxError'] = false;
-	    $score = $_SESSION['score'];
+	    $score = $_SESSION['score'] +1;
 	    
 	    
 	    if ( $ran_op == "0" ) {
