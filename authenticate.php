@@ -12,6 +12,7 @@
     <div class="container">
     <form action="authenticate.php" method="post" role="form" class="form-horizontal">
         <?php
+	    $answer="";
 	    $operators = array('+','-');
 	    $ran_op = rand() % 2;
 	    $operator = $operators[$ran_op]; 
