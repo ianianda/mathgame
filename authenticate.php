@@ -73,7 +73,7 @@
 		    $_SESSION['first_number'] = $first_number;
 		    $_SESSION['second_number'] = $second_number;
 		    $_SESSION['operator'] = $operator;
-		    $_SESSION['total_try'] = $total_try + 1;
+		    $_SESSION['total_try'] = $total_try;
 		    ?>
         </div>
         <div class="col-sm-5">
