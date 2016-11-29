@@ -62,7 +62,7 @@
        			    echo "<font color='red'>You must enter a number for your answer.</font>";  
 			} else if ($answer == $_SESSION['key']){
 			    echo "<font color='green'>Correct</font>";
-			} else {
+			} else if ($answer != $_SESSION['key']){
 			    echo "<font color='red'>INCorrect</font>";
 			}
 			
