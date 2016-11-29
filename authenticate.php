@@ -28,7 +28,7 @@
 	    if ($_SERVER["REQUEST_METHOD"] == "POST") {
   		if (is_numeric($_POST["answer"])) { //textbox is a number
 		    $answer = $_POST["answer"];
-			       echo $answer);
+			       echo $answer;);
 	        } else {
    		    $_SESSION['textboxError'] = true;
 		       }}
@@ -58,7 +58,7 @@
 	            <?php
 			if($_SESSION['textboxError'] == true) {
        			    echo "<font color='red'>You must enter a number for your answer.</font>";  
-			} else if ($textbox == $answer){
+			} else if ($answer == $key){
 			    echo "<font color='green'>Correct</font>";
 			}
 			
