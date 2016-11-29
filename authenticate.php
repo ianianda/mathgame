@@ -15,10 +15,10 @@
 	<?php
 	$ops = array('+','-');
 	$index = rand() % 2;
-	 $ops[$index];
+	$operator = $ops[$index]; //
 	//if($index == 0) a+b;
-	$rand_key = array_rand($ops);
-	$operator =- $ops[$rand_key];
+	//$rand_key = array_rand($ops);
+	//$operator = $ops[$rand_key];
 	$first_number = rand(0, 20);
 	$second_number = rand(0, 20);
 	$add_answer = $first_number + $second_number;
@@ -57,6 +57,7 @@
             <input type="text" class="form-control" id="answer" name="answer" placeholder="Enter answer" size="6">
 		
 		<?php 
+		$sub_answer =0;
 		if (isset($_SESSION['textboxError']) || $_SESSION['textboxError'] == true) {
                 echo "<font color='red'>You must enter a number for your answer.</font>";} 	
   	        else if ($textbox != $sub_answer){
