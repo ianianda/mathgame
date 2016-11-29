@@ -23,7 +23,7 @@
             //$last_score = $_POST['score'];
             //$last_total = $_POST['total'] + 1;  
   		if (is_numeric($_POST["answer"])) { //textbox is a number
-		    ($_POST["answer"] = $answer);
+		    $_POST["answer"] = $answer;
 			echo $answer;
 			echo $key;
 	        } else {
