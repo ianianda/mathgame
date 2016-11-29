@@ -64,6 +64,7 @@
                 <input type="text" class="form-control" id="answer" name="answer" placeholder="Enter answer" size="6">
 	            <?php
 			  if($_SESSION['textboxError'] == true) {
+				   $score = $_POST['score'];
        			    echo "<font color='red'>You must enter a number for your answer.</font>";
 				  
 			} else if ($_SESSION['key'] == $answer){
@@ -72,6 +73,7 @@
 				  
 				  
 			} else if ($_SESSION['key'] != $answer){
+				   $score = $_POST['score'];
 			    echo '<span style="color: red; font-weight: bold;">INCORRECT, ' . $_SESSION['first_number'] . ' ' . $_SESSION['operator'] . ' ' . $_SESSION['second_number'] . ' is ' . $key . '.</span>';
 			//$total++;	  
 			}
