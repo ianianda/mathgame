@@ -54,7 +54,7 @@
         <input type="hidden" name="operation" value="-" />
         <input type="hidden" name="second_number" value="3" />
         <input type="hidden" name="total" value="0" />
-        <input type="hidden" name="score" value="2" />
+        <input type="hidden" name="score" value="0" />
 
         <div class="form-group">
             <div class="col-sm-3 col-sm-offset-4">	
@@ -82,8 +82,7 @@
     <div class="row">
         <div class="col-sm-3 col-sm-offset-4">
 		<?php
-		$total_try++;
-		$_SESSION['total_try'] = $total_try;
+		$total++;
 		?>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button type="submit" class="btn btn-primary btn-sm">
@@ -100,7 +99,7 @@
     <div class="col-sm-4"></div>
 </div>
 <div class="row">
-    <div class="col-sm-4 col-sm-offset-4"><?php echo 'Score: ' . $correct_score . ' / ' . $_SESSION['total_try']; ?></div>
+    <div class="col-sm-4 col-sm-offset-4"><?php echo 'Score: ' . $score . ' / ' . $_SESSION['total']; ?></div>
     <div class="col-sm-4"></div>
 </div>
     </div>
