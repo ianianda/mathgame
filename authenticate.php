@@ -63,7 +63,7 @@
 			} else if ($_SESSION['key'] == $answer){
 			    echo "<font color='green'>Correct</font>";
 			} else if ($_SESSION['key'] != $answer){
-			    echo '<span style="color: red; font-weight: bold;">INCORRECT, ' . $_SESSION['first_number'] . ' ' . $_SESSION['operator'] . ' ' . $_SESSION['second_number'] . ' is ' . $_SESSION['key'] . '.</span>';
+			    echo '<span style="color: red; font-weight: bold;">INCORRECT, ' . $_SESSION['first_number'] . ' ' . $_SESSION['operator'] . ' ' . $_SESSION['second_number'] . ' is ' . $key . '.</span>';
 			}
 			$_SESSION['key'] = $key;
 		    $_SESSION['first_number'] = $first_number;
