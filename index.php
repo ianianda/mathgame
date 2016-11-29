@@ -2,7 +2,18 @@
 <html lang="en">
     <?php
         session_start();
-        //$score= $_POST['score'];
+        if (empty($_SESSION['score'])){
+	$score = 0;
+	} else {
+	$score = $_SESSION['score'];
+	}
+	
+        //if (empty($_SESSION['total'])){
+	//$total = 0;
+	//} else {
+	//$total = $_SESSION['total'];
+	//}
+	//$score= $_POST['score'];
     ?>
 <head>
     <title>Math Game</title>
@@ -13,7 +24,7 @@
     <div class="container">
     <form action="index.php" method="post" role="form" class="form-horizontal">
         <?php
-	    $last_score = $_POST['score'];
+	    //$last_score = $_POST['score'];
 	    $operators = array('+','-');
 	    $ran_op = rand() % 2;
 	    $operator = $operators[$ran_op]; 
@@ -69,7 +80,8 @@
        			    echo "<font color='red'>You must enter a number for your answer.</font>";
 				  
 			} else if ($_SESSION['key'] == $answer){
-				  $last_score++;
+				  $score++;
+				  $_SESSION['score'] = $score;
 			    echo "<font color='green'>Correct</font>";
 				  
 				  
@@ -82,7 +94,7 @@
 		    $_SESSION['first_number'] = $first_number;
 		    $_SESSION['second_number'] = $second_number;
 		    $_SESSION['operator'] = $operator;
-		    $score = $last_score;
+		    //$score = $last_score;
 		    //$_POST['score'] = $score;
 		    //$_POST['total'] = $total++;
 		    ?>
@@ -107,7 +119,7 @@
     <div class="col-sm-4"></div>
 </div>
 <div class="row">
-    <div class="col-sm-4 col-sm-offset-4"><?php echo 'Score: ' . $last_score .  ' / ' . $total; ?></div>
+    <div class="col-sm-4 col-sm-offset-4"><?php echo 'Score: ' . $score .  ' / ' . $total; ?></div>
 	<?php
 	echo $_POST['score'];
 	?>
