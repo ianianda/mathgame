@@ -27,8 +27,8 @@
 	
 	    if ($_SERVER["REQUEST_METHOD"] == "POST") {
   		if (is_numeric($_POST["answer"])) { //textbox is a number
-		    $answer = $_POST["answer"];
-			       echo $answer;);
+		    $answer = ($_POST["answer"]);
+			       echo $answer;
 	        } else {
    		    $_SESSION['textboxError'] = true;
 		       }}
