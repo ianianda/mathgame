@@ -58,10 +58,12 @@
 		
 		<?php 
 		$sub_answer =0;
-		if (isset($_SESSION['textboxError']) || $_SESSION['textboxError'] == true) {
-                echo "<font color='red'>You must enter a number for your answer.</font>";} 	
+		if (isset($_SESSION['textboxError']) && $_SESSION['textboxError'] == true) {
+                	echo "<font color='red'>You must enter a number for your answer.</font>";
+		} 	
   	        else if ($textbox != $sub_answer){
-		echo "your answer is incorrect";}
+			echo "your answer is incorrect";
+		}
 		?>
         </div>
         <div class="col-sm-5">
