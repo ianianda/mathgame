@@ -7,16 +7,14 @@
         }
 
     if(!isset($_POST['email']) || $_POST['email'] !== "a@a.a") {
-        $error = true;
+        header("Location: login.php?msg=Invalid%20login%20credentials.");
         }
 
     if(!isset($_POST['password']) || $_POST['password'] !== "aaa") {
-        $error = true;
+        header("Location: login.php?msg=Invalid%20login%20credentials.");
         }
 
-    if($error) {
-        header("Location: login.php?msg=Invalid%20login%20credentials.");
-    } else {
+     else if {
         $_SESSION['login'] = 'yes';
         header("Location: index.php");
         die();
