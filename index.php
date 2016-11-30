@@ -5,9 +5,7 @@
 
 	if(empty($_SESSION['login'])) {
 	header('Location: login.php');
-}
-	
-	
+        }
 	
         if (!isset($_SESSION['score'])){
 	    $score = 0;
@@ -93,9 +91,7 @@
 		    
 				$total++;
 				$_SESSION['total'] = $total;
-		        //$total = $_POST['total'] + 1;       
 		       }
-		    
 		    ?>
             </div>
             <div class="col-sm-5"></div>
