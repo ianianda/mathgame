@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    if(isset($_SESSION['login']) && $_SESSION['login'] == 'yes') {
+    if(isset($_SESSION['login']) && $_SESSION['login'] == 'true') {
 	header('Location: index.php');
         }
 
@@ -14,7 +14,7 @@
         }
 
      else {
-        $_SESSION['login'] = 'yes';
+        $_SESSION['login'] = 'true';
         header("Location: index.php");
         die();
     }
